@@ -1,0 +1,61 @@
+name: Suggest an entry
+description: Propose a link for the list.
+title: "Add: "
+labels: ["enhancement"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      placeholder: Example Ads
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Official link
+      description: The provider's own site, docs or repository. No affiliate or tracking parameters.
+      placeholder: https://example.com
+    validations:
+      required: true
+  - type: dropdown
+    id: section
+    attributes:
+      label: Section
+      options:
+        - Rewarded ads and mediation
+        - Offerwalls
+        - In-app purchases and subscriptions
+        - Web monetization
+        - Ad networks for web
+        - Attribution and analytics
+        - Anti-fraud and traffic quality
+        - Policies
+        - Open source tools and libraries
+        - Learning
+    validations:
+      required: true
+  - type: input
+    id: description
+    attributes:
+      label: One-line description
+      description: One factual sentence that ends with a period. No superlatives or earnings claims.
+      placeholder: Ad network for mobile games with rewarded video.
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it belongs
+      description: Who uses it and what it does that the existing entries do not.
+    validations:
+      required: true
+  - type: dropdown
+    id: affiliation
+    attributes:
+      label: Are you affiliated with this product?
+      options:
+        - "No"
+        - "Yes, I work for or with the company"
+    validations:
+      required: true
