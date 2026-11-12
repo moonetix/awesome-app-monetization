@@ -3,7 +3,7 @@
 // Zero dependencies. Node 20 or later.
 //
 // Usage:
-//   node scripts/check-links.mjs [file] [--delay=1000] [--strict] [--json]
+//   node scripts/check-links.mjs [file] [--delay=1000] [--strict] [--json] [--report=broken.md]
 //
 // Result per link:
 //   ok    2xx, directly or after redirects
@@ -16,6 +16,8 @@
 // API rate limit (the workflow does this).
 
 import { readFile } from 'node:fs/promises';
+import { writeReport } from './link-report.mjs';
+import { runUrl } from './github-issue.mjs';
 
 const args = process.argv.slice(2);
 const file = args.find((a) => !a.startsWith('--')) ?? 'README.md';
@@ -23,6 +25,7 @@ const delayArg = args.find((a) => a.startsWith('--delay='));
 const delayMs = delayArg ? Number(delayArg.split('=')[1]) : 1000;
 const strict = args.includes('--strict');
 const asJson = args.includes('--json');
+const reportArg = args.find((a) => a.startsWith('--report='));
 
 const USER_AGENT = 'Mozilla/5.0 (compatible; awesome-app-monetization-link-check/1.0; +https://github.com/moonetix/awesome-app-monetization)';
 const TIMEOUT_MS = 20000;
@@ -145,5 +148,7 @@ if (asJson) {
 } else {
   console.log(`\n${links.length} links: ${count('ok')} ok, ${count('warn')} warn, ${count('fail')} fail`);
 }
+// --report writes the issue body for the scheduled workflow, or deletes it when nothing failed.
+if (reportArg) writeReport(reportArg.slice(9), results, { run: runUrl() });
 const failed = count('fail') > 0 || (strict && count('warn') > 0);
 process.exit(failed ? 1 : 0);
