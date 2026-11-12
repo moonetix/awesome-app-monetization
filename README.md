@@ -44,7 +44,7 @@ Ad networks with rewarded formats, and the mediation platforms that run an aucti
 
 An offerwall lists offers (install and reach a level, sign up, finish a survey) and pays users in your own currency when they complete one. The network pays you per completed offer and tells your server through a signed postback. For SDKs, guides and postback security resources, see [Awesome Offerwalls](https://github.com/moonetix/awesome-offerwalls).
 
-- [Moonetix](https://moonetix.com/publishers) - Pay-per-result affiliate network with a hosted offerwall (link, iframe, floating button), an Offers API, and SDKs for Android, iOS, Flutter, React Native and Unity.
+- [Moonetix](https://moonetix.com/publishers) - Affiliate network with a hosted offerwall (link, iframe, floating button), an Offers API, and SDKs for Android, iOS, Flutter, React Native and Unity.
 - [AdGem](https://adgem.com) - Offerwall and rewarded video ad units for app publishers.
 - [adjoe Playtime](https://adjoe.io/solutions/monetize-your-app/playtime/) - Offerwall that rewards users for the time they spend in advertised apps.
 - [BitLabs](https://bitlabs.ai) - Rewarded surveys, games, shopping and offers for apps and websites, part of Prodege.
@@ -308,8 +308,11 @@ Read the official rules of every platform you ship on before you add ads, reward
 
 ## About Moonetix
 
-Moonetix is a pay-per-result affiliate network. Publishers add its offerwall to an app, game, website, bot or community, and users earn the publisher's own currency by completing offers. Integration is a signed link, an iframe, the Offers API, or SDKs for Android, iOS, Flutter, React Native and Unity, with documentation at [docs.moonetix.com](https://docs.moonetix.com).
+Moonetix is an affiliate network. Publishers add its offerwall to an app, game, website, bot or community, and users earn the publisher's own currency by completing offers. Integration is a signed link, an iframe, the Offers API, or SDKs for Android, iOS, Flutter, React Native and Unity, with documentation at [docs.moonetix.com](https://docs.moonetix.com).
 
-Open source from Moonetix: [offerwall-postback-handlers](https://github.com/moonetix/offerwall-postback-handlers), [offerwall-nextjs-starter](https://github.com/moonetix/offerwall-nextjs-starter), [telegram-mini-app-offerwall](https://github.com/moonetix/telegram-mini-app-offerwall), [discord-rewards-bot](https://github.com/moonetix/discord-rewards-bot), [moonetix-offerwall-wordpress](https://github.com/moonetix/moonetix-offerwall-wordpress).
+Open source from Moonetix:
 
-Publisher accounts: [moonetix.com/register](https://moonetix.com/register).
+- **Data and tools:** [datacenter-ip-ranges](https://github.com/moonetix/datacenter-ip-ranges), [postback-tester](https://github.com/moonetix/postback-tester), [affiliate-postback-macros](https://github.com/moonetix/affiliate-postback-macros), [country-tiers](https://github.com/moonetix/country-tiers), [reward-economy-kit](https://github.com/moonetix/reward-economy-kit), [offerwall-fraud-playbook](https://github.com/moonetix/offerwall-fraud-playbook), [signup-guard](https://github.com/moonetix/signup-guard), [referral-engine](https://github.com/moonetix/referral-engine), [gamification-kit](https://github.com/moonetix/gamification-kit).
+- **Integrations:** [offerwall-postback-handlers](https://github.com/moonetix/offerwall-postback-handlers), [offerwall-nextjs-starter](https://github.com/moonetix/offerwall-nextjs-starter), [offerwall-laravel](https://github.com/moonetix/offerwall-laravel), [offerwall-django](https://github.com/moonetix/offerwall-django), [telegram-mini-app-offerwall](https://github.com/moonetix/telegram-mini-app-offerwall), [discord-rewards-bot](https://github.com/moonetix/discord-rewards-bot), [moonetix-offerwall-wordpress](https://github.com/moonetix/moonetix-offerwall-wordpress).
+
+Publisher accounts: [moonetix.com/register](https://moonetix.com/register?from=github-awesome-app-monetization).
